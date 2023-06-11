@@ -55,42 +55,95 @@ D7 = X Y Z
 ## Figure -04 8 to 3 Decoder implementation 
 
 ### Procedure
-/* write all the steps invloved */
+Step-1:
 
+create module encoder and decoder.
+
+Step-2:
+
+Get inputs and outputs for encoders and decoders.
+
+Step-3:
+
+perform or operation for encoder and and logic for decoders.
+
+Step-4:
+
+perform RTL LOGIC and get waveform.
+
+Step-5:
+
+End the module.
 
 
 ### PROGRAM 
-/*
+```python
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-
-
-
-
-
+Developed by: Harsha vardhan
+RegisterNumber: 212222240114 
+```
+### ENCODER:
+```python
+module EX7(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
+output a,b,c;
+input d0,d1,d2,d3,d4,d5,d6,d7;
+or(a,d4,d5,d6,d7);
+or(b,d2,d3,d6,d7);
+or(c,d1,d3,d5,d7);
+endmodule
+```
+### DECODER:
+```python
+module EX7(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
+input a,b,c;
+output d0,d1,d2,d3,d4,d5,d6,d7;
+assign d0 = (~a&~b&~c);
+assign d1 = (~a&~b&c);
+assign d2 = (~a&b&~c);
+assign d3 = (~a&b&c);
+assign d4 = (a&~b&~c);
+assign d5 = (a&~b&c);
+assign d6 = (a&b&~c);
+assign d7 = (a&b&c);
+endmodule
+```
 
 ### RTL LOGIC  
+ENCODER:
+
+![EN (1)](https://github.com/Harshavardhan779/Experiment-08-Encoders-and-decoders-/assets/118707175/2cc34763-1f18-4759-a28b-5d8bdedb2a2b)
+
+### DECODER:
 
 
-
-
-
+![DE](https://github.com/Harshavardhan779/Experiment-08-Encoders-and-decoders-/assets/118707175/8d8205b2-e91e-4cf6-b13b-4d2df8b995d6)
 
 
 
 ### TIMING DIGRAMS  
+### ENCODER:
 
 
+![ENCOD](https://github.com/Harshavardhan779/Experiment-08-Encoders-and-decoders-/assets/118707175/b466db49-83c4-4b17-aa44-0dec9399199f)
 
+
+### DECODER: 
+
+![DECOD](https://github.com/Harshavardhan779/Experiment-08-Encoders-and-decoders-/assets/118707175/d19ff5a6-8ece-4679-b363-0e15ff21cf21)
 
 
 ### TRUTH TABLE 
+### ENCODER:
+
+![TT](https://github.com/Harshavardhan779/Experiment-08-Encoders-and-decoders-/assets/118707175/c1f855bc-ce57-40de-9974-cc4e9c7cab8c)
 
 
+### DECODER:
 
-
+![TT1](https://github.com/Harshavardhan779/Experiment-08-Encoders-and-decoders-/assets/118707175/602851c4-7a2c-4750-b930-fda06a11af09)
 
 
 ### RESULTS 
+Thus the program to desing encoder and decoder is completed.
+
+
